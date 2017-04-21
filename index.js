@@ -6,7 +6,20 @@ module.exports.PortablePrint = {
     console.log('NativeModules=testPrint=', NativeModules);
   	console.log('NTPortablePrint=testPrint=', NTPortablePrint);
     return new Promise((resolve, reject) => {
-	    NTPortablePrint.testPrint("test message",(error, data) => {
+	    NTPortablePrint.testPrint(msg='test message',(error, data) => {
+			  if (error) {
+			    console.log(error);
+			    return reject(error);
+			  } else {
+			    console.log(data);
+			    resolve(data);
+			  }
+		});
+    });
+  },
+  printPDF: (portName,portSettings) => {
+    return new Promise((resolve, reject) => {
+	    NTPortablePrint.printPDF(portName, portSettings,(error, data) => {
 			  if (error) {
 			    console.log(error);
 			    return reject(error);
