@@ -1,0 +1,23 @@
+{
+  "name": "react-native-portable-print",
+  "version": "1.0.0",
+  "description": "主要针对思达SM-S230i",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaorong2015/react-native-portable-print.git"
+  },
+  "keywords": [
+    "SM-S230i portable print"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chaorong@maichong.it",
+  "license": "MIT",
+  "dependencies": {},
+  "bugs": {
+    "url": "https://github.com/chaorong2015/react-native-portable-print/issues"
+  },
+  "homepage": "https://github.com/chaorong2015/react-native-portable-print#readme"
+}
