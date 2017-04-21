@@ -49,5 +49,3 @@ RCT_EXPORT_METHOD(printPDF:(portName:(NSString *)portName
     callback(@[@"", @" print pdf is success!"]);
 }
 @end
-/Users/chaorong/iOS/react-native-portable-print/index.js
-/Users/chaorong/iOS/react-native-portable-print/README.md
