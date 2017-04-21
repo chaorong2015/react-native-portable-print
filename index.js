@@ -1,6 +1,6 @@
 'use strict';
 const { NativeModules } = require('react-native');
-const NTPortablePrint = NativeModules.PortablePrint;
+const NTPortablePrint = NativeModules.NTPortablePrint;
 module.exports.PortablePrint = {
   testPrint: () => {
     console.log('NativeModules=testPrint=', NativeModules);

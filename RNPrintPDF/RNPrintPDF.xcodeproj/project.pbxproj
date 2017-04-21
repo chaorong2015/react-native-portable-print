@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		9BB160B41EA9F25000F999AF /* RNPrintPDF.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9BB160B31EA9F25000F999AF /* RNPrintPDF.h */; };
 		9BB160B61EA9F25000F999AF /* RNPrintPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB160B51EA9F25000F999AF /* RNPrintPDF.m */; };
+		9BCD1E8E1EAA5EB400FD41B4 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCD1E8B1EAA5EB300FD41B4 /* SMCloudServices.framework */; };
+		9BCD1E8F1EAA5EB400FD41B4 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCD1E8C1EAA5EB300FD41B4 /* StarIO.framework */; };
+		9BCD1E901EAA5EB400FD41B4 /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCD1E8D1EAA5EB400FD41B4 /* StarIO_Extension.framework */; };
+		9BCD1E9D1EAA5EF700FD41B4 /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1E941EAA5EF700FD41B4 /* NSData+MD5.m */; };
+		9BCD1E9E1EAA5EF700FD41B4 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1E961EAA5EF700FD41B4 /* NSString+MD5.m */; };
+		9BCD1E9F1EAA5EF700FD41B4 /* PDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1E981EAA5EF700FD41B4 /* PDFView.m */; };
+		9BCD1EA01EAA5EF700FD41B4 /* UIImage+PDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1E9A1EAA5EF700FD41B4 /* UIImage+PDF.m */; };
+		9BCD1EA11EAA5EF700FD41B4 /* UIView+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1E9C1EAA5EF700FD41B4 /* UIView+Image.m */; };
+		9BCD1EAA1EAA5F3A00FD41B4 /* PrinterFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1EA51EAA5F3A00FD41B4 /* PrinterFunctions.m */; };
+		9BCD1EAB1EAA5F3A00FD41B4 /* RasterDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1EA71EAA5F3A00FD41B4 /* RasterDocument.m */; };
+		9BCD1EAC1EAA5F3A00FD41B4 /* StarBitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BCD1EA91EAA5F3A00FD41B4 /* StarBitmap.m */; };
+		9BCD1EB41EAA636000FD41B4 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCD1EB31EAA636000FD41B4 /* CoreBluetooth.framework */; };
+		9BCD1EB61EAA639000FD41B4 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BCD1EB51EAA639000FD41B4 /* ExternalAccessory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +41,29 @@
 		9BB160B01EA9F25000F999AF /* libRNPrintPDF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPrintPDF.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB160B31EA9F25000F999AF /* RNPrintPDF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPrintPDF.h; sourceTree = "<group>"; };
 		9BB160B51EA9F25000F999AF /* RNPrintPDF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPrintPDF.m; sourceTree = "<group>"; };
+		9BCD1E891EAA5E4400FD41B4 /* YinYang.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = YinYang.pdf; sourceTree = "<group>"; };
+		9BCD1E8B1EAA5EB300FD41B4 /* SMCloudServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMCloudServices.framework; sourceTree = "<group>"; };
+		9BCD1E8C1EAA5EB300FD41B4 /* StarIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO.framework; sourceTree = "<group>"; };
+		9BCD1E8D1EAA5EB400FD41B4 /* StarIO_Extension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO_Extension.framework; sourceTree = "<group>"; };
+		9BCD1E931EAA5EF700FD41B4 /* NSData+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MD5.h"; sourceTree = "<group>"; };
+		9BCD1E941EAA5EF700FD41B4 /* NSData+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+MD5.m"; sourceTree = "<group>"; };
+		9BCD1E951EAA5EF700FD41B4 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		9BCD1E961EAA5EF700FD41B4 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		9BCD1E971EAA5EF700FD41B4 /* PDFView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFView.h; sourceTree = "<group>"; };
+		9BCD1E981EAA5EF700FD41B4 /* PDFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFView.m; sourceTree = "<group>"; };
+		9BCD1E991EAA5EF700FD41B4 /* UIImage+PDF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PDF.h"; sourceTree = "<group>"; };
+		9BCD1E9A1EAA5EF700FD41B4 /* UIImage+PDF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PDF.m"; sourceTree = "<group>"; };
+		9BCD1E9B1EAA5EF700FD41B4 /* UIView+Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Image.h"; sourceTree = "<group>"; };
+		9BCD1E9C1EAA5EF700FD41B4 /* UIView+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Image.m"; sourceTree = "<group>"; };
+		9BCD1EA31EAA5F3A00FD41B4 /* CommonEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonEnum.h; sourceTree = "<group>"; };
+		9BCD1EA41EAA5F3A00FD41B4 /* PrinterFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrinterFunctions.h; sourceTree = "<group>"; };
+		9BCD1EA51EAA5F3A00FD41B4 /* PrinterFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrinterFunctions.m; sourceTree = "<group>"; };
+		9BCD1EA61EAA5F3A00FD41B4 /* RasterDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RasterDocument.h; sourceTree = "<group>"; };
+		9BCD1EA71EAA5F3A00FD41B4 /* RasterDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RasterDocument.m; sourceTree = "<group>"; };
+		9BCD1EA81EAA5F3A00FD41B4 /* StarBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarBitmap.h; sourceTree = "<group>"; };
+		9BCD1EA91EAA5F3A00FD41B4 /* StarBitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarBitmap.m; sourceTree = "<group>"; };
+		9BCD1EB31EAA636000FD41B4 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		9BCD1EB51EAA639000FD41B4 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +71,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BCD1EB61EAA639000FD41B4 /* ExternalAccessory.framework in Frameworks */,
+				9BCD1EB41EAA636000FD41B4 /* CoreBluetooth.framework in Frameworks */,
+				9BCD1E8F1EAA5EB400FD41B4 /* StarIO.framework in Frameworks */,
+				9BCD1E8E1EAA5EB400FD41B4 /* SMCloudServices.framework in Frameworks */,
+				9BCD1E901EAA5EB400FD41B4 /* StarIO_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +85,11 @@
 		9BB160A71EA9F25000F999AF = {
 			isa = PBXGroup;
 			children = (
+				9BCD1E891EAA5E4400FD41B4 /* YinYang.pdf */,
 				9BB160B21EA9F25000F999AF /* RNPrintPDF */,
+				9BCD1EA21EAA5F3A00FD41B4 /* PrinterFunctions */,
+				9BCD1E911EAA5EF700FD41B4 /* UIImage+PDF */,
+				9BCD1E8A1EAA5EB300FD41B4 /* Frameworks */,
 				9BB160B11EA9F25000F999AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +109,49 @@
 				9BB160B51EA9F25000F999AF /* RNPrintPDF.m */,
 			);
 			path = RNPrintPDF;
+			sourceTree = "<group>";
+		};
+		9BCD1E8A1EAA5EB300FD41B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BCD1EB51EAA639000FD41B4 /* ExternalAccessory.framework */,
+				9BCD1EB31EAA636000FD41B4 /* CoreBluetooth.framework */,
+				9BCD1E8B1EAA5EB300FD41B4 /* SMCloudServices.framework */,
+				9BCD1E8C1EAA5EB300FD41B4 /* StarIO.framework */,
+				9BCD1E8D1EAA5EB400FD41B4 /* StarIO_Extension.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		9BCD1E911EAA5EF700FD41B4 /* UIImage+PDF */ = {
+			isa = PBXGroup;
+			children = (
+				9BCD1E931EAA5EF700FD41B4 /* NSData+MD5.h */,
+				9BCD1E941EAA5EF700FD41B4 /* NSData+MD5.m */,
+				9BCD1E951EAA5EF700FD41B4 /* NSString+MD5.h */,
+				9BCD1E961EAA5EF700FD41B4 /* NSString+MD5.m */,
+				9BCD1E971EAA5EF700FD41B4 /* PDFView.h */,
+				9BCD1E981EAA5EF700FD41B4 /* PDFView.m */,
+				9BCD1E991EAA5EF700FD41B4 /* UIImage+PDF.h */,
+				9BCD1E9A1EAA5EF700FD41B4 /* UIImage+PDF.m */,
+				9BCD1E9B1EAA5EF700FD41B4 /* UIView+Image.h */,
+				9BCD1E9C1EAA5EF700FD41B4 /* UIView+Image.m */,
+			);
+			path = "UIImage+PDF";
+			sourceTree = "<group>";
+		};
+		9BCD1EA21EAA5F3A00FD41B4 /* PrinterFunctions */ = {
+			isa = PBXGroup;
+			children = (
+				9BCD1EA31EAA5F3A00FD41B4 /* CommonEnum.h */,
+				9BCD1EA41EAA5F3A00FD41B4 /* PrinterFunctions.h */,
+				9BCD1EA51EAA5F3A00FD41B4 /* PrinterFunctions.m */,
+				9BCD1EA61EAA5F3A00FD41B4 /* RasterDocument.h */,
+				9BCD1EA71EAA5F3A00FD41B4 /* RasterDocument.m */,
+				9BCD1EA81EAA5F3A00FD41B4 /* StarBitmap.h */,
+				9BCD1EA91EAA5F3A00FD41B4 /* StarBitmap.m */,
+			);
+			path = PrinterFunctions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +210,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BCD1EA01EAA5EF700FD41B4 /* UIImage+PDF.m in Sources */,
+				9BCD1E9E1EAA5EF700FD41B4 /* NSString+MD5.m in Sources */,
+				9BCD1EAC1EAA5F3A00FD41B4 /* StarBitmap.m in Sources */,
+				9BCD1E9F1EAA5EF700FD41B4 /* PDFView.m in Sources */,
+				9BCD1EAB1EAA5F3A00FD41B4 /* RasterDocument.m in Sources */,
 				9BB160B61EA9F25000F999AF /* RNPrintPDF.m in Sources */,
+				9BCD1EA11EAA5EF700FD41B4 /* UIView+Image.m in Sources */,
+				9BCD1E9D1EAA5EF700FD41B4 /* NSData+MD5.m in Sources */,
+				9BCD1EAA1EAA5F3A00FD41B4 /* PrinterFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +308,10 @@
 		9BB160BA1EA9F25000F999AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../node_modules/react-native/React",
 					"/**",
@@ -228,6 +328,10 @@
 		9BB160BB1EA9F25000F999AF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../../node_modules/react-native/React",
 					"/**",
@@ -260,6 +364,7 @@
 				9BB160BB1EA9F25000F999AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

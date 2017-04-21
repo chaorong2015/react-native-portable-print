@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "RCTBridgeModule.h"
+#import "UIImage+PDF.h"
+#import "PrinterFunctions.h"
 
 @interface RNPrintPDF : NSObject <RCTBridgeModule>
 

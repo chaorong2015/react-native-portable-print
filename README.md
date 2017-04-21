@@ -1,5 +1,5 @@
 # react-native-shared-images
-＃ iOS 分享链接 多张图片
+＃ 打印 PDF
 #### iOS
 1. `npm install react-native-portable-print --save`
 2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
