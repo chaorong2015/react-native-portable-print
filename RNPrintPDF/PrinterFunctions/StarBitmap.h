@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <UIKit/UIKit.h>
 #define RGBA 4
 #define RGBA_8_BIT 8
 

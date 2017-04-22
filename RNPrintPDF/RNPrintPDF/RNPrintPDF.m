@@ -22,9 +22,9 @@ RCT_EXPORT_METHOD(testPrint:(NSString *)text
     callback(@[[NSNull null], testStr]);
 }
 
-RCT_EXPORT_METHOD(printPDF:(portName:(NSString *)portName
-                            portSettings:(NSString *)portSettings
-                            callback:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(printPDF:portName:(NSString *)portName
+                           portSettings:(NSString *)portSettings
+                           callback:(RCTResponseSenderBlock)callback)
 {
     if (portName == nil) {
         callback(@[@"portName not found.", @""]);
