@@ -252,7 +252,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
 {
     self = [super init];
     if (self != nil) {
-        [image retain];
         int32_t width = image.size.width; //CGImageGetWidth([image CGImage]);
         int32_t height = image.size.height; //CGImageGetHeight([image CGImage]);
         int32_t h2 = 0;
@@ -260,8 +259,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
         {
             h2 = (int)(((double)height * (float)maxWidth)/(double)width); //SCALLING IMAGE DOWN TO FIT ON PAPER IF TOO BIG
             m_image =  ScaleImage(image, maxWidth, h2);
-            [image release];
-            [m_image retain];
         }
         else
         {
@@ -275,11 +272,9 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
 
 - (void)dealloc
 {
-	[m_image release];
     if (imageData != nil) {
 		// [imageData release];
 	}
-	[super dealloc];
 }
 
 /*!
@@ -430,10 +425,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
 
 	free(pixels);
 
-	imageData = [[[NSData alloc] initWithBytes:data.mutableBytes length:data.length] autorelease];
-
-	[data release];
-
 	return imageData;
 }
 
@@ -473,8 +464,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
     u_int8_t *constructedBytes = (u_int8_t *)malloc(9 + mWidth);
     if (constructedBytes == NULL) {
         free(pixels);
-        [data release];
-        
         return nil;
     }
     memset(constructedBytes, 0x00, 9 + mWidth);
@@ -591,8 +580,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
     
     imageData = [NSData dataWithBytes:data.mutableBytes length:data.length];
     
-    [data release];
-    
     return imageData;
 }
 
@@ -681,7 +668,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
 	free(pixels);
 
 	imageData = [[NSData alloc] initWithBytes:[data mutableBytes] length:[data length]];
-	[data release];
 	return imageData;
 }
 
@@ -794,8 +780,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
         if (command != nil)
         {
             [someData appendData:command];
-
-            [command release];
         }
         else
         {
@@ -819,10 +803,6 @@ void ConvertToMonochromeSteinbertDithering(ARGBPixel * image, int32_t width, int
 	[someData appendBytes:endingBytes length:1];
 
 	free(pixels);
-
-	imageData = [[[NSData alloc] initWithBytes:someData.mutableBytes length:someData.length] autorelease];
-
-	[someData release];
 
 	return imageData;
 }
