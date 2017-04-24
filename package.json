@@ -1,23 +1,82 @@
 {
-  "name": "react-native-portable-print",
-  "version": "1.0.0",
+  "_args": [
+    [
+      {
+        "raw": "eact-native-portable-print@git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+        "scope": null,
+        "escapedName": "eact-native-portable-print",
+        "name": "eact-native-portable-print",
+        "rawSpec": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+        "spec": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:chaorong2015/react-native-portable-print.git",
+          "sshUrl": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+          "httpsUrl": "git+https://github.com/chaorong2015/react-native-portable-print.git",
+          "gitUrl": "git://github.com/chaorong2015/react-native-portable-print.git",
+          "shortcut": "github:chaorong2015/react-native-portable-print",
+          "directUrl": "https://raw.githubusercontent.com/chaorong2015/react-native-portable-print/master/package.json"
+        }
+      },
+      "/Users/chaorong/iOS/reactNativeDemo"
+    ]
+  ],
+  "_from": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+  "_id": "react-native-portable-print@1.0.0",
+  "_inCache": true,
+  "_location": "/react-native-portable-print",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "eact-native-portable-print@git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+    "scope": null,
+    "escapedName": "eact-native-portable-print",
+    "name": "eact-native-portable-print",
+    "rawSpec": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+    "spec": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:chaorong2015/react-native-portable-print.git",
+      "sshUrl": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+      "httpsUrl": "git+https://github.com/chaorong2015/react-native-portable-print.git",
+      "gitUrl": "git://github.com/chaorong2015/react-native-portable-print.git",
+      "shortcut": "github:chaorong2015/react-native-portable-print",
+      "directUrl": "https://raw.githubusercontent.com/chaorong2015/react-native-portable-print/master/package.json"
+    }
+  },
+  "_requiredBy": [],
+  "_resolved": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git#e97dcc5a50c0805e7c1990076cffcfc48402aeb1",
+  "_shasum": "0d11a36f1556ef3c88c08a86692cbc24f8c0afa3",
+  "_shrinkwrap": null,
+  "_spec": "eact-native-portable-print@git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+  "_where": "/Users/chaorong/iOS/reactNativeDemo",
+  "author": {
+    "name": "chaorong@maichong.it"
+  },
+  "bugs": {
+    "url": "https://github.com/chaorong2015/react-native-portable-print/issues"
+  },
+  "dependencies": {},
   "description": "主要针对思达SM-S230i",
+  "devDependencies": {},
+  "gitHead": "e97dcc5a50c0805e7c1990076cffcfc48402aeb1",
+  "homepage": "https://github.com/chaorong2015/react-native-portable-print#readme",
+  "keywords": [
+    "SM-S230i portable print"
+  ],
+  "license": "MIT",
   "main": "index.js",
+  "name": "react-native-portable-print",
+  "optionalDependencies": {},
+  "readme": "# react-native-shared-images\n＃ 打印 PDF\n#### iOS\n1. `npm install react-native-portable-print --save`\n2. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`\n3. Go to `node_modules` ➜ `react-native-portable-print` and add `RNPortablePrint.xcodeproj`\n4. In XCode, in the project navigator, select your project. Add `RNPortablePrint.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`\n5. Click `RNPortablePrint.xcodeproj` in the project navigator and go the `Build Settings` tab. Make sure 'All' is toggled on (instead of 'Basic'). In the `Search Paths` section, look for `Header Search Paths` and make sure it contains both `$(SRCROOT)/../../../node_modules/react-native/React` - mark both as `recursive`.\n5. Run your project (`Cmd+R`)\n6.Edit information property list.\nNote: Please do not apply this, if you are not using Bluetooth ineterface.\n1. Click on the information property list file (default : “Info.plist”).\n2. Add the “Supported external accessory protocols” Key.\n3. Click the triangle of this key and set the value for the “Item 0” to “jp.star-m.starpro”.\n\n```js\n\n####使用说明\n\n##1、先引用库\nimport { PortablePrint } from 'react-native-portable-print';\n\n##2、接口说明\n/*测试插件*\n＊@para msg string\n*/\nlet msg = await PortablePrint.testPrint(msg);\n\n##2、接口说明\n/*打印pdf*\n＊@para portName string\n＊@para portSettings string\n*/\nlet msg = await PortablePrint.printPDF(portName,portSettings);\n",
+  "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/chaorong2015/react-native-portable-print.git"
   },
-  "keywords": [
-    "SM-S230i portable print"
-  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "chaorong@maichong.it",
-  "license": "MIT",
-  "dependencies": {},
-  "bugs": {
-    "url": "https://github.com/chaorong2015/react-native-portable-print/issues"
-  },
-  "homepage": "https://github.com/chaorong2015/react-native-portable-print#readme"
+  "version": "1.0.0"
 }

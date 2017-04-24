@@ -11,6 +11,8 @@
 #import "UIImage+PDF.h"
 #import "PrinterFunctions.h"
 
+@class SMBluetoothManager, SMPort;
+
 @interface RNPrintPDF : NSObject <RCTBridgeModule>
 
 @end

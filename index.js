@@ -1,12 +1,16 @@
 'use strict';
 const { NativeModules } = require('react-native');
-const NTPortablePrint = NativeModules.NTPortablePrint;
+const RNPrintPDF = NativeModules.RNPrintPDF;
 module.exports.PortablePrint = {
-  testPrint: () => {
-    console.log('NativeModules=testPrint=', NativeModules);
-  	console.log('NTPortablePrint=testPrint=', NTPortablePrint);
+  testPrint: (msg) => {
+   //  console.log('NativeModules=testPrint=', NativeModules);
+  	// console.log('RNPrintPDF=testPrint=', RNPrintPDF);
     return new Promise((resolve, reject) => {
-	    NTPortablePrint.testPrint(msg='test message',(error, data) => {
+    	if(!msg){
+    		msg ='test message'
+    	};
+	    RNPrintPDF.testPrint(msg,(error, data) => {
+	    	console.log('进入testPrint');
 			  if (error) {
 			    console.log(error);
 			    return reject(error);
@@ -19,7 +23,7 @@ module.exports.PortablePrint = {
   },
   printPDF: (portName,portSettings) => {
     return new Promise((resolve, reject) => {
-	    NTPortablePrint.printPDF(portName, portSettings,(error, data) => {
+	    RNPrintPDF.printPDF(portName, portSettings,(error, data) => {
 			  if (error) {
 			    console.log(error);
 			    return reject(error);

@@ -99,7 +99,7 @@
         shortcommand = [rasterDoc EndDocumentCommandData];
         [commandsToPrint appendData:shortcommand];
         
-        //        [rasterDoc release];
+//                [rasterDoc release];
     } else if (printerType == SMPrinterTypePortablePrinterStarLine) {
         ////////////////////////
         NSData *shortcommand = [starbitmap getGraphicsDataForPrinting:compressionEnable];

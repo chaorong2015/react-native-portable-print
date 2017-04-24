@@ -12,27 +12,22 @@
 
 RCT_EXPORT_MODULE();
 
-//测试方法导出
-RCT_EXPORT_METHOD(testPrint:(NSString *)text
-                  callback:(RCTResponseSenderBlock)callback)
-{
-    NSString *testStr = [NSString stringWithFormat:@"%@",text];
-    NSLog(@"testStr is :%@",testStr);
-    //NSString *message = @"callback message!!!";
-    callback(@[[NSNull null], testStr]);
+RCT_EXPORT_METHOD(testPrint:(NSString *)message
+                  callback:(RCTResponseSenderBlock)callback){
+    NSLog(@"string is :%@",message);
+    //NSLog(@"%@",message);
+    callback(@[[NSNull null], message]);
 }
-
 RCT_EXPORT_METHOD(printPDF:(NSString *)portName
-                           portSettings:(NSString *)portSettings
-                           callback:(RCTResponseSenderBlock)callback)
+                  portSettings:(NSString *)portSettings
+                  callback:(RCTResponseSenderBlock)callback)
 {
     if (portName == nil) {
         callback(@[@"portName not found.", @""]);
         return;
     }
     if (portSettings == nil) {
-        callback(@[@"portSettings not found.", @""]);
-        return;
+        portSettings = @"Portable";
     }
     //NSLog(@"%@",message);
     /* Always round up coordinates before passing them into UIKit
