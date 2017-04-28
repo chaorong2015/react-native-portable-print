@@ -44,10 +44,8 @@ RCT_EXPORT_METHOD(searchPrinter:(RCTResponseSenderBlock)callback){
     //NSLog(@"%@",message);
     /* Always round up coordinates before passing them into UIKit
      */
-    int maxWidthPrint = 320;
-    CGFloat imageWidth = 320;
-    CGFloat imageHeight = 540;
-    CGSize imageSize = CGSizeMake( imageWidth, imageHeight );
+    int maxWidthPrint = 300; //2 Inch:384  3 Inch:576 4 Inch:832
+    CGSize imageSize = CGSizeMake( 320, 540 );
     NSURL *URL = [NSURL URLWithString:filePath];
     UIImage *imageTemp = [ UIImage imageWithPDFURL:URL atSize:imageSize];
 //    UIImage *imagePrint = [ UIImage imageWithPDFURL:URL fitSize:imageSize atPage:1 ];
