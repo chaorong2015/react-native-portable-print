@@ -44,7 +44,7 @@ RCT_EXPORT_METHOD(searchPrinter:(RCTResponseSenderBlock)callback){
     //NSLog(@"%@",message);
     /* Always round up coordinates before passing them into UIKit
      */
-    int maxWidthPrint = 300;
+    int maxWidthPrint = 320;
     CGFloat imageWidth = 320;
     CGFloat imageHeight = 540;
     CGSize imageSize = CGSizeMake( imageWidth, imageHeight );
@@ -55,11 +55,15 @@ RCT_EXPORT_METHOD(searchPrinter:(RCTResponseSenderBlock)callback){
 //    UIImage *imageTemp = [ UIImage imageWithPDFNamed:@"YinYang.pdf" atSize:imageSize ];
     NSString *path_sandox = NSHomeDirectory();
     //设置一个图片的存储路径
-    NSString *imagePath = [path_sandox stringByAppendingString:@"/temp/ticket.jpg"];
+    NSString *imagePath = [path_sandox stringByAppendingString:@"/tmp/ticket.jpg"];
     //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
     [UIImagePNGRepresentation(imageTemp) writeToFile:imagePath atomically:YES];
     UIImage *imagePrint = [UIImage imageWithContentsOfFile:imagePath];
     NSLog(@"imagePrint===%@",imagePrint);
+    if(imagePrint == nil){
+        callback(@[@"", @"Not Found Ticket"]);
+        return;
+    }
     if([portSettings isEqualToString: @"Portable"]){
 //        NSLog(@"PrintImageWithPortname===>>");
         resultStr = [PrinterFunctions PrintImageWithPortname:portName
