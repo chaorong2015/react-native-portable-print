@@ -47,7 +47,7 @@ typedef enum
     int mLeftMargin;
     int mRightMargin;
 }
-
+    
 - (id)init;
 - (id)initWithDefaults:(RasSpeed)speed
     endOfPageBehaviour:(RasPageEndMode)endOfPageBehaviour_m
@@ -59,5 +59,5 @@ endOfDocumentBahaviour:(RasPageEndMode)endOfDocumentBehaviour_m
 - (NSData *)BeginDocumentCommandData;
 - (NSData *)EndDocumentCommandData;
 - (NSData *)PageBreakCommandData;
-
-@end
+    
+    @end

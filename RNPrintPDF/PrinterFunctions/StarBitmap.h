@@ -8,26 +8,28 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
 #define RGBA 4
 #define RGBA_8_BIT 8
 
 typedef struct ARGBPixel {
-	unsigned char alpha;
-	unsigned char red;
-	unsigned char green;
-	unsigned char blue;
+    unsigned char alpha;
+    unsigned char red;
+    unsigned char green;
+    unsigned char blue;
 } ARGBPixel;
 
 @interface StarBitmap : NSObject {
-	UIImage *m_image;
-	NSData *imageData;
-	bool ditheringSupported;
+    UIImage *m_image;
+    NSData *imageData;
+    bool ditheringSupported;
 }
-
+    
 - (id)initWithUIImage:(UIImage *)image :(int)maxWidth :(bool)dithering;
+- (void)dealloc;
 - (NSData *)getImageDataForPrinting:(BOOL)compressionEnable;
 - (NSData *)getGraphicsDataForPrinting:(BOOL)compressionEnable;
 - (NSData *)getImageMiniDataForPrinting:(BOOL)compressionEnable pageModeEnable:(BOOL)pageModeEnable;
 - (NSData *)getImageImpactPrinterForPrinting;
-
-@end
+    
+    @end

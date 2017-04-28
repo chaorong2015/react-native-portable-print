@@ -20,20 +20,41 @@
         }
       },
       "/Users/chaorong/iOS/reactNativeDemo"
+    ],
+    [
+      {
+        "raw": "react-native-portable-print@git+https://github.com/chaorong2015/react-native-portable-print.git",
+        "scope": null,
+        "escapedName": "react-native-portable-print",
+        "name": "react-native-portable-print",
+        "rawSpec": "git+https://github.com/chaorong2015/react-native-portable-print.git",
+        "spec": "git+https://github.com/chaorong2015/react-native-portable-print.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:chaorong2015/react-native-portable-print.git",
+          "sshUrl": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+          "httpsUrl": "git+https://github.com/chaorong2015/react-native-portable-print.git",
+          "gitUrl": "git://github.com/chaorong2015/react-native-portable-print.git",
+          "shortcut": "github:chaorong2015/react-native-portable-print",
+          "directUrl": "https://raw.githubusercontent.com/chaorong2015/react-native-portable-print/master/package.json"
+        }
+      },
+      "/Users/lulu/Desktop/market/sale"
     ]
   ],
-  "_from": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+  "_from": "git+https://github.com/chaorong2015/react-native-portable-print.git",
   "_id": "react-native-portable-print@1.0.0",
   "_inCache": true,
   "_location": "/react-native-portable-print",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "eact-native-portable-print@git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+    "raw": "react-native-portable-print@git+https://github.com/chaorong2015/react-native-portable-print.git",
     "scope": null,
-    "escapedName": "eact-native-portable-print",
-    "name": "eact-native-portable-print",
-    "rawSpec": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
-    "spec": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
+    "escapedName": "react-native-portable-print",
+    "name": "react-native-portable-print",
+    "rawSpec": "git+https://github.com/chaorong2015/react-native-portable-print.git",
+    "spec": "git+https://github.com/chaorong2015/react-native-portable-print.git",
     "type": "hosted",
     "hosted": {
       "type": "github",
@@ -45,12 +66,14 @@
       "directUrl": "https://raw.githubusercontent.com/chaorong2015/react-native-portable-print/master/package.json"
     }
   },
-  "_requiredBy": [],
-  "_resolved": "git+ssh://git@github.com/chaorong2015/react-native-portable-print.git#e97dcc5a50c0805e7c1990076cffcfc48402aeb1",
-  "_shasum": "0d11a36f1556ef3c88c08a86692cbc24f8c0afa3",
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/chaorong2015/react-native-portable-print.git#a87989b146c301da151bb8d956b349315c26e1f4",
+  "_shasum": "04303ffbe8889103f0f1c8ce169f61f6f110efdb",
   "_shrinkwrap": null,
-  "_spec": "eact-native-portable-print@git+ssh://git@github.com/chaorong2015/react-native-portable-print.git",
-  "_where": "/Users/chaorong/iOS/reactNativeDemo",
+  "_spec": "react-native-portable-print@git+https://github.com/chaorong2015/react-native-portable-print.git",
+  "_where": "/Users/lulu/Desktop/market/sale",
   "author": {
     "name": "chaorong@maichong.it"
   },

@@ -4,7 +4,7 @@ const RNPrintPDF = NativeModules.RNPrintPDF;
 module.exports.PortablePrint = {
   testPrint: (msg) => {
    //  console.log('NativeModules=testPrint=', NativeModules);
-  	// console.log('RNPrintPDF=testPrint=', RNPrintPDF);
+  	console.log('RNPrintPDF=RNPrintPDF=', RNPrintPDF);
     return new Promise((resolve, reject) => {
     	if(!msg){
     		msg ='test message'
@@ -21,9 +21,9 @@ module.exports.PortablePrint = {
 		});
     });
   },
-  printPDF: (portName,portSettings) => {
+  printPDF: (filePath, portName, portSettings) => {
     return new Promise((resolve, reject) => {
-	    RNPrintPDF.printPDF(portName, portSettings,(error, data) => {
+	    RNPrintPDF.printPDF(filePath, portName, portSettings,(error, data) => {
 			  if (error) {
 			    console.log(error);
 			    return reject(error);
@@ -32,6 +32,19 @@ module.exports.PortablePrint = {
 			    resolve(data);
 			  }
 		});
+    });
+  },
+  searchPrinter: () => {
+    return new Promise((resolve, reject) => {
+      RNPrintPDF.searchPrinter((error, data) => {
+        if (error) {
+          console.log(error);
+          return reject(error);
+        } else {
+          console.log(data);
+          resolve(data);
+        }
+      });
     });
   }
 };

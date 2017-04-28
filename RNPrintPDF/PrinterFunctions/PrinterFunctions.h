@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "CommonEnum.h"
 
-@class SMBluetoothManager, SMPort;
+//@class SMBluetoothManager, SMPort;
 
 typedef enum _SMPrinterType {
     SMPrinterTypeUnknown = 0,
@@ -86,25 +86,37 @@ typedef enum {
 } Min_Mod_Size;
 
 
-@interface PrinterFunctions : NSObject {
-    SMPort *starPort;
-}
+@interface PrinterFunctions : NSObject
 
 + (SMPrinterType)parsePortSettings:(NSString *)portSettings;
 
 #pragma mark common
 
-+ (void)PrintImageWithPortname:(NSString *)portName
++ (NSString *)PrintImageWithPortname:(NSString *)portName
                   portSettings:(NSString *)portSettings
                   imageToPrint:(UIImage *)imageToPrint
                       maxWidth:(int)maxWidth
              compressionEnable:(BOOL)compressionEnable
                 withDrawerKick:(BOOL)drawerKick;
-#pragma mark -
 
-+ (void)sendCommand:(NSData *)commandsToPrint
+#pragma mark -
++ (NSString *)sendCommand:(NSData *)commandsToPrint
            portName:(NSString *)portName
        portSettings:(NSString *)portSettings
       timeoutMillis:(u_int32_t)timeoutMillis;
 
+#pragma mark search
++ (NSArray *)SearchPrinter;
+#
++ (NSString *)PrintBitmapWithPortName:(NSString *)portName
+                         portSettings:(NSString *)portSettings
+                          imageSource:(UIImage *)source
+                         printerWidth:(int)maxWidth
+                    compressionEnable:(BOOL)compressionEnable
+                       pageModeEnable:(BOOL)pageModeEnable;
+#
++ (NSString *)sendCommandBitmap:(NSData *)commands
+                       portName:(NSString *)portName
+                   portSettings:(NSString *)portSettings
+                  timeoutMillis:(u_int32_t)timeoutMillis;
 @end
