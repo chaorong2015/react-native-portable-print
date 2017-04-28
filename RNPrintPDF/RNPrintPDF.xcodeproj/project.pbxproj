@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B0CD5A01EB36B750012CEB3 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */; };
-		9B0CD5A11EB36B750012CEB3 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59E1EB36B750012CEB3 /* StarIO.framework */; };
-		9B0CD5A21EB36B750012CEB3 /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */; };
+		9B0CD5A31EB36BC20012CEB3 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */; };
+		9B0CD5A41EB36BC70012CEB3 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59E1EB36B750012CEB3 /* StarIO.framework */; };
+		9B0CD5A51EB36BC90012CEB3 /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */; };
 		9BB160B41EA9F25000F999AF /* RNPrintPDF.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9BB160B31EA9F25000F999AF /* RNPrintPDF.h */; };
 		9BB160B61EA9F25000F999AF /* RNPrintPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB160B51EA9F25000F999AF /* RNPrintPDF.m */; };
 		9BB4A60C1EADADCE00737E6D /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6001EADADCE00737E6D /* NSData+MD5.m */; };
@@ -85,15 +85,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0CD5A01EB36B750012CEB3 /* SMCloudServices.framework in Frameworks */,
+				9B0CD5A51EB36BC90012CEB3 /* StarIO_Extension.framework in Frameworks */,
+				9B0CD5A41EB36BC70012CEB3 /* StarIO.framework in Frameworks */,
 				AFED7BB81EB24F3900C2093D /* CoreImage.framework in Frameworks */,
 				AFED7BB61EB24F2000C2093D /* CoreGraphics.framework in Frameworks */,
 				AF18136C1EB0A19800CFBEED /* UIKit.framework in Frameworks */,
-				9B0CD5A21EB36B750012CEB3 /* StarIO_Extension.framework in Frameworks */,
 				AF1813171EB08F1A00CFBEED /* QuartzCore.framework in Frameworks */,
 				AF1813151EB08F0500CFBEED /* Foundation.framework in Frameworks */,
 				9BB4A61C1EADBC5D00737E6D /* ExternalAccessory.framework in Frameworks */,
-				9B0CD5A11EB36B750012CEB3 /* StarIO.framework in Frameworks */,
+				9B0CD5A31EB36BC20012CEB3 /* SMCloudServices.framework in Frameworks */,
 				9BB4A61A1EADBC4400737E6D /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
