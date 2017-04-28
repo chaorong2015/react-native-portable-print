@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B0CD5961EB369DD0012CEB3 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD5901EB368D50012CEB3 /* SMCloudServices.framework */; };
-		9B0CD5971EB369E00012CEB3 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD5911EB368D50012CEB3 /* StarIO.framework */; };
-		9B0CD5981EB369E30012CEB3 /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD5921EB368D50012CEB3 /* StarIO_Extension.framework */; };
-		9B0CD5991EB36A010012CEB3 /* SMCloudServices.framework in Resources */ = {isa = PBXBuildFile; fileRef = 9B0CD5901EB368D50012CEB3 /* SMCloudServices.framework */; };
-		9B0CD59A1EB36A040012CEB3 /* StarIO.framework in Resources */ = {isa = PBXBuildFile; fileRef = 9B0CD5911EB368D50012CEB3 /* StarIO.framework */; };
-		9B0CD59B1EB36A070012CEB3 /* StarIO_Extension.framework in Resources */ = {isa = PBXBuildFile; fileRef = 9B0CD5921EB368D50012CEB3 /* StarIO_Extension.framework */; };
+		9B0CD5A01EB36B750012CEB3 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */; };
+		9B0CD5A11EB36B750012CEB3 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59E1EB36B750012CEB3 /* StarIO.framework */; };
+		9B0CD5A21EB36B750012CEB3 /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */; };
 		9BB160B41EA9F25000F999AF /* RNPrintPDF.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9BB160B31EA9F25000F999AF /* RNPrintPDF.h */; };
 		9BB160B61EA9F25000F999AF /* RNPrintPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB160B51EA9F25000F999AF /* RNPrintPDF.m */; };
 		9BB4A60C1EADADCE00737E6D /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6001EADADCE00737E6D /* NSData+MD5.m */; };
@@ -49,9 +46,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9B0CD5901EB368D50012CEB3 /* SMCloudServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMCloudServices.framework; sourceTree = "<group>"; };
-		9B0CD5911EB368D50012CEB3 /* StarIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO.framework; sourceTree = "<group>"; };
-		9B0CD5921EB368D50012CEB3 /* StarIO_Extension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO_Extension.framework; sourceTree = "<group>"; };
+		9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMCloudServices.framework; sourceTree = "<group>"; };
+		9B0CD59E1EB36B750012CEB3 /* StarIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO.framework; sourceTree = "<group>"; };
+		9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO_Extension.framework; sourceTree = "<group>"; };
 		9BB160B01EA9F25000F999AF /* libRNPrintPDF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPrintPDF.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB160B31EA9F25000F999AF /* RNPrintPDF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPrintPDF.h; sourceTree = "<group>"; };
 		9BB160B51EA9F25000F999AF /* RNPrintPDF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPrintPDF.m; sourceTree = "<group>"; };
@@ -88,28 +85,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0CD5981EB369E30012CEB3 /* StarIO_Extension.framework in Frameworks */,
-				9B0CD5971EB369E00012CEB3 /* StarIO.framework in Frameworks */,
+				9B0CD5A01EB36B750012CEB3 /* SMCloudServices.framework in Frameworks */,
 				AFED7BB81EB24F3900C2093D /* CoreImage.framework in Frameworks */,
 				AFED7BB61EB24F2000C2093D /* CoreGraphics.framework in Frameworks */,
 				AF18136C1EB0A19800CFBEED /* UIKit.framework in Frameworks */,
+				9B0CD5A21EB36B750012CEB3 /* StarIO_Extension.framework in Frameworks */,
 				AF1813171EB08F1A00CFBEED /* QuartzCore.framework in Frameworks */,
 				AF1813151EB08F0500CFBEED /* Foundation.framework in Frameworks */,
 				9BB4A61C1EADBC5D00737E6D /* ExternalAccessory.framework in Frameworks */,
+				9B0CD5A11EB36B750012CEB3 /* StarIO.framework in Frameworks */,
 				9BB4A61A1EADBC4400737E6D /* CoreBluetooth.framework in Frameworks */,
-				9B0CD5961EB369DD0012CEB3 /* SMCloudServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9B0CD58F1EB368D50012CEB3 /* StarIOSDK */ = {
+		9B0CD59C1EB36B750012CEB3 /* StarIOSDK */ = {
 			isa = PBXGroup;
 			children = (
-				9B0CD5901EB368D50012CEB3 /* SMCloudServices.framework */,
-				9B0CD5911EB368D50012CEB3 /* StarIO.framework */,
-				9B0CD5921EB368D50012CEB3 /* StarIO_Extension.framework */,
+				9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */,
+				9B0CD59E1EB36B750012CEB3 /* StarIO.framework */,
+				9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */,
 			);
 			path = StarIOSDK;
 			sourceTree = "<group>";
@@ -117,7 +114,7 @@
 		9BB160A71EA9F25000F999AF = {
 			isa = PBXGroup;
 			children = (
-				9B0CD58F1EB368D50012CEB3 /* StarIOSDK */,
+				9B0CD59C1EB36B750012CEB3 /* StarIOSDK */,
 				AFED7BA41EB1EF1200C2093D /* SMCloudServicesResources.bundle */,
 				9BB4A64E1EADDFB300737E6D /* PrinterFunctions */,
 				9BB4A5FE1EADADCE00737E6D /* UIImage+PDF */,
@@ -255,11 +252,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0CD59B1EB36A070012CEB3 /* StarIO_Extension.framework in Resources */,
-				9B0CD59A1EB36A040012CEB3 /* StarIO.framework in Resources */,
 				AFED7BB21EB2055400C2093D /* Info.plist in Resources */,
 				AFED7BA51EB1EF1200C2093D /* SMCloudServicesResources.bundle in Resources */,
-				9B0CD5991EB36A010012CEB3 /* SMCloudServices.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
