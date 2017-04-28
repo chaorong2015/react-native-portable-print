@@ -22,13 +22,13 @@ RCT_EXPORT_METHOD(searchPrinter:(RCTResponseSenderBlock)callback){
     NSArray *portArray = [[PrinterFunctions SearchPrinter] retain];
     callback(@[[NSNull null], portArray]);
 }
-    RCT_EXPORT_METHOD(printPDF:(NSString *)filePath
-                      portName:(NSString *)portName
+RCT_EXPORT_METHOD(printPDF:(NSString *)filePath
+                  portName:(NSString *)portName
                   portSettings:(NSString *)portSettings
                   callback:(RCTResponseSenderBlock)callback)
 {
     NSString * resultStr = nil;
-    NSLog(@"imagePrint=>filePath===%@",filePath);
+    //    NSLog(@"imagePrint=>filePath===%@",filePath);
     if (filePath == nil) {
         callback(@[@"filePath not found.", @""]);
         return;
@@ -37,33 +37,29 @@ RCT_EXPORT_METHOD(searchPrinter:(RCTResponseSenderBlock)callback){
         callback(@[@"portName not found.", @""]);
         return;
     }
-//    portSettings = @"Portable";
+    //    portSettings = @"Portable";
     if (portSettings == nil) {
         portSettings = @"Portable";
     }
     //NSLog(@"%@",message);
     /* Always round up coordinates before passing them into UIKit
      */
-    int maxWidthPrint = 300; //2 Inch:384  3 Inch:576 4 Inch:832
-    CGSize imageSize = CGSizeMake( 320, 540 );
-    NSURL *URL = [NSURL URLWithString:filePath];
-    UIImage *imageTemp = [ UIImage imageWithPDFURL:URL atSize:imageSize];
-//    UIImage *imagePrint = [ UIImage imageWithPDFURL:URL fitSize:imageSize atPage:1 ];
-//    UIImage *imagePrint = [UIImage imageNamed:@"image1.png"];
-//    UIImage *imageTemp = [ UIImage imageWithPDFNamed:@"YinYang.pdf" atSize:imageSize ];
-    NSString *path_sandox = NSHomeDirectory();
-    //设置一个图片的存储路径
-    NSString *imagePath = [path_sandox stringByAppendingString:@"/tmp/ticket.jpg"];
-    //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
-    [UIImagePNGRepresentation(imageTemp) writeToFile:imagePath atomically:YES];
-    UIImage *imagePrint = [UIImage imageWithContentsOfFile:imagePath];
+    int maxWidthPrint = 384; //2 Inch:384  3 Inch:576 4 Inch:832
+    UIImage *imagePrint = [ UIImage imageOrPDFWithContentsOfFile:filePath];
+    //    NSString *path_sandox = NSHomeDirectory();
+    //    //设置一个图片的存储路径
+    //    NSString *imagePath = [path_sandox stringByAppendingString:@"/tmp/ticket.jpg"];
+    //    //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
+    //    [UIImagePNGRepresentation(imageTemp) writeToFile:imagePath atomically:YES];
+    //    //读取图片
+    //    UIImage *imagePrint = [UIImage imageWithContentsOfFile:imagePath];
     NSLog(@"imagePrint===%@",imagePrint);
     if(imagePrint == nil){
         callback(@[@"", @"Not Found Ticket"]);
         return;
     }
     if([portSettings isEqualToString: @"Portable"]){
-//        NSLog(@"PrintImageWithPortname===>>");
+        //        NSLog(@"PrintImageWithPortname===>>");
         resultStr = [PrinterFunctions PrintImageWithPortname:portName
                                                 portSettings:portSettings
                                                 imageToPrint:imagePrint
@@ -71,7 +67,7 @@ RCT_EXPORT_METHOD(searchPrinter:(RCTResponseSenderBlock)callback){
                                            compressionEnable:true
                                               withDrawerKick:NO];
     } else{
-//        NSLog(@"PrintBitmapWithPortName===>>");
+        //        NSLog(@"PrintBitmapWithPortName===>>");
         resultStr = [PrinterFunctions PrintBitmapWithPortName:portName
                                                  portSettings:portSettings
                                                   imageSource:imagePrint
