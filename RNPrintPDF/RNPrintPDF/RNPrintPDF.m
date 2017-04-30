@@ -7,6 +7,7 @@
 //
 
 #import "RNPrintPDF.h"
+#import "StarBitmap.h"
 
 @implementation RNPrintPDF
 
@@ -27,7 +28,6 @@ RCT_EXPORT_METHOD(printPDF:(NSString *)filePath
                   portSettings:(NSString *)portSettings
                   callback:(RCTResponseSenderBlock)callback)
 {
-    NSString * resultStr = nil;
     //    NSLog(@"imagePrint=>filePath===%@",filePath);
     if (filePath == nil) {
         callback(@[@"filePath not found.", @""]);
@@ -45,14 +45,16 @@ RCT_EXPORT_METHOD(printPDF:(NSString *)filePath
     /* Always round up coordinates before passing them into UIKit
      */
     int maxWidthPrint = 384; //2 Inch:384  3 Inch:576 4 Inch:832
-    UIImage *imagePrint = [ UIImage imageOrPDFWithContentsOfFile:filePath];
-    //    NSString *path_sandox = NSHomeDirectory();
-    //    //设置一个图片的存储路径
-    //    NSString *imagePath = [path_sandox stringByAppendingString:@"/tmp/ticket.jpg"];
-    //    //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
-    //    [UIImagePNGRepresentation(imageTemp) writeToFile:imagePath atomically:YES];
-    //    //读取图片
-    //    UIImage *imagePrint = [UIImage imageWithContentsOfFile:imagePath];
+    UIImage *imageSource = [ UIImage imageOrPDFWithContentsOfFile:filePath]; //650 * 940  sdk 832 * 400
+    CGSize imageSize = CGSizeMake(832, 1222);
+    UIImage *imageTemp = [StarBitmap reSizeImage:imageSource toSize:imageSize];
+    NSString *path_sandox = NSHomeDirectory();
+    //设置一个图片的存储路径
+    NSString *imagePath = [path_sandox stringByAppendingString:@"/tmp/ticket.jpg"];
+    //把图片直接保存到指定的路径（同时应该把图片的路径imagePath存起来，下次就可以直接用来取）
+    [UIImagePNGRepresentation(imageTemp) writeToFile:imagePath atomically:YES];
+    //读取图片
+    UIImage *imagePrint = [UIImage imageWithContentsOfFile:imagePath];
     NSLog(@"imagePrint===%@",imagePrint);
     if(imagePrint == nil){
         callback(@[@"", @"Not Found Ticket"]);
@@ -60,24 +62,21 @@ RCT_EXPORT_METHOD(printPDF:(NSString *)filePath
     }
     if([portSettings isEqualToString: @"Portable"]){
         //        NSLog(@"PrintImageWithPortname===>>");
-        resultStr = [PrinterFunctions PrintImageWithPortname:portName
+        [PrinterFunctions PrintImageWithPortname:portName
                                                 portSettings:portSettings
                                                 imageToPrint:imagePrint
                                                     maxWidth:maxWidthPrint
-                                           compressionEnable:true
+                                           compressionEnable:false
                                               withDrawerKick:NO];
     } else{
         //        NSLog(@"PrintBitmapWithPortName===>>");
-        resultStr = [PrinterFunctions PrintBitmapWithPortName:portName
+        [PrinterFunctions PrintBitmapWithPortName:portName
                                                  portSettings:portSettings
                                                   imageSource:imagePrint
                                                  printerWidth:maxWidthPrint
-                                            compressionEnable:true
+                                            compressionEnable:false
                                                pageModeEnable:true];
     }
-    if(resultStr == nil){
-        resultStr = @"Error: portException";
-    }
-    callback(@[@"", resultStr]);
+    callback(@[@"", @"Print end"]);
 }
 @end

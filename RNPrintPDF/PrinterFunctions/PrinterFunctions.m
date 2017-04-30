@@ -74,7 +74,7 @@
  *  @param  maxWidth        The maximum with the image to print. This is usually the page with of the printer. If the
  *                          image exceeds the maximum width then the image is scaled down. The ratio is maintained.
  */
-+ (NSString *)PrintImageWithPortname:(NSString *)portName
++ (void)PrintImageWithPortname:(NSString *)portName
                   portSettings:(NSString *)portSettings
                   imageToPrint:(UIImage *)imageToPrint
                       maxWidth:(int)maxWidth
@@ -82,10 +82,10 @@
                 withDrawerKick:(BOOL)drawerKick
 {
     NSMutableData *commandsToPrint = [NSMutableData new];
-    NSString *resultStr = @"";
+    
     SMPrinterType printerType = [self parsePortSettings:portSettings];
     StarBitmap *starbitmap = [[StarBitmap alloc] initWithUIImage:imageToPrint :maxWidth :false];
-    /////////////////////////////////
+    
     if (printerType == SMPrinterTypeDesktopPrinterStarLine) {
         RasterDocument *rasterDoc = [[RasterDocument alloc] initWithDefaults:RasSpeed_Medium endOfPageBehaviour:RasPageEndMode_FeedAndFullCut endOfDocumentBahaviour:RasPageEndMode_FeedAndFullCut topMargin:RasTopMargin_Standard pageLength:0 leftMargin:0 rightMargin:0];
         
@@ -98,17 +98,17 @@
         shortcommand = [rasterDoc EndDocumentCommandData];
         [commandsToPrint appendData:shortcommand];
         
-                [rasterDoc release];
+        [rasterDoc release];
     } else if (printerType == SMPrinterTypePortablePrinterStarLine) {
-        ////////////////////////
         NSData *shortcommand = [starbitmap getGraphicsDataForPrinting:compressionEnable];
         [commandsToPrint appendData:shortcommand];
-        /////////////////////////
     } else {
         [commandsToPrint release];
         [starbitmap release];
-        return @"Not Found PrinterType";
+        NSLog(@"====10000");
+        return;
     }
+    
     [starbitmap release];
     
     // Kick Cash Drawer
@@ -117,16 +117,16 @@
                               length:sizeof("\x07") - 1];
     }
     
-    resultStr = [self sendCommand:commandsToPrint portName:portName portSettings:portSettings timeoutMillis:10000];
+    [self sendCommand:commandsToPrint portName:portName portSettings:portSettings timeoutMillis:10000];
+    
     [commandsToPrint release];
-    return resultStr;
 }
-+ (NSString *)sendCommand:(NSData *)commandsToPrint
+
++ (void)sendCommand:(NSData *)commandsToPrint
            portName:(NSString *)portName
        portSettings:(NSString *)portSettings
       timeoutMillis:(u_int32_t)timeoutMillis
 {
-    NSString *catchError = nil;
     int commandSize = (int)commandsToPrint.length;
     unsigned char *dataToSentToPrinter = (unsigned char *)malloc(commandSize);
     [commandsToPrint getBytes:dataToSentToPrinter length:commandSize];
@@ -135,18 +135,15 @@
     @try
     {
         starPort = [SMPort getPort:portName :portSettings :timeoutMillis];
-        
         if (starPort == nil)
         {
-            NSLog(@"====Fail to Open Port.\nRefer to \"getPort API\" in the manual.");
-            return @"Fail to Open Port";
+            return;
         }
         
         StarPrinterStatus_2 status;
         [starPort beginCheckedBlock:&status :2];
         if (status.offline == SM_TRUE) {
-            NSLog(@"====Error : Printer is offline");
-            return @"Error : Printer is offline";
+            return;
         }
         
         struct timeval endTime;
@@ -170,30 +167,23 @@
         
         if (totalAmountWritten < commandSize)
         {
-            NSLog(@"====Printer Error : Write port timed out");
-            return @"Printer Error : Write port timed out";
+            return;
         }
         
         starPort.endCheckedBlockTimeoutMillis = 30000;
         [starPort endCheckedBlock:&status :2];
         if (status.offline == SM_TRUE) {
-            NSLog(@"====Error : Printer is offline");
-            return @"Error : Printer is offline";
+            return;
         }
     }
     @catch (PortException *exception)
     {
-        NSLog(@"====Printer Error : Write port timed out");
-        catchError = @"Printer Error : Write port timed out";
+        
     }
     @finally
     {
         free(dataToSentToPrinter);
         [SMPort releasePort:starPort];
-        
-        if(catchError != nil){
-            return catchError;
-        }
     }
 }
 + (NSArray *)SearchPrinter{
@@ -222,44 +212,43 @@
      * @param   maxWidth        The maximum with the image to print. This is usually the page with of the printer. If the
      *                          image exceeds the maximum width then the image is scaled down. The ratio is maintained.
      */
-+ (NSString *)PrintBitmapWithPortName:(NSString *)portName
++ (void)PrintBitmapWithPortName:(NSString *)portName
                    portSettings:(NSString *)portSettings
                     imageSource:(UIImage *)source
                    printerWidth:(int)maxWidth
               compressionEnable:(BOOL)compressionEnable
                  pageModeEnable:(BOOL)pageModeEnable
-    {
-        NSMutableData *data = [NSMutableData data];
-        StarBitmap *starbitmap = [[StarBitmap alloc] initWithUIImage:source :maxWidth :false];
-        NSData *commands = [[starbitmap getImageMiniDataForPrinting:compressionEnable pageModeEnable:pageModeEnable] retain];
-        [data appendData:commands];
-        
-        u_int8_t feedCommand[] = {0x1b, 0x4A, 0x78}; // feed 120 pixel (15mm)
-        [data appendBytes:feedCommand length:3];
-        NSString * result = [self sendCommandBitmap:data portName:portName portSettings:portSettings timeoutMillis:30000];
-        
-        [commands release];
-        [starbitmap release];
-        NSLog(@"====Printer Error : %@", result);
-        return result;
-    }
-+ (NSString *)sendCommandBitmap:(NSData *)commands
-           portName:(NSString *)portName
-       portSettings:(NSString *)portSettings
-      timeoutMillis:(u_int32_t)timeoutMillis {
+{
+    NSMutableData *data = [NSMutableData data];
+//    NSLog(@"portSettings===%@",portSettings);
+    StarBitmap *starbitmap = [[StarBitmap alloc] initWithUIImage:source :maxWidth :false];
+    NSData *commands = [[starbitmap getImageMiniDataForPrinting:compressionEnable pageModeEnable:pageModeEnable] retain];
+    [data appendData:commands];
     
-    NSString *catchError = nil;
+    u_int8_t feedCommand[] = {0x1b, 0x4A, 0x78}; // feed 120 pixel (15mm)
+    [data appendBytes:feedCommand length:3];
+
+    [self sendCommandBitmap:data portName:portName portSettings:portSettings timeoutMillis:30000];
+    
+    [commands release];
+    [starbitmap release];
+}
++ (void)sendCommandBitmap:(NSData *)commands
+                 portName:(NSString *)portName
+             portSettings:(NSString *)portSettings
+            timeoutMillis:(u_int32_t)timeoutMillis {
+    
     unsigned char *commandsToSendToPrinter = (unsigned char *)malloc(commands.length);
     [commands getBytes:commandsToSendToPrinter length:commands.length];
     int commandSize = (int)commands.length;
+    
     SMPort *starPort = nil;
     @try
     {
         starPort = [SMPort getPort:portName :portSettings :timeoutMillis];
         if (starPort == nil)
         {
-            NSLog(@"====Fail to Open Port");
-            return @"Fail to Open Port";
+            return;
         }
         
         struct timeval endTime;
@@ -271,8 +260,7 @@
         
         if (status.offline == SM_TRUE)
         {
-            NSLog(@"====Error: Printer is offline");
-            return @"Error: Printer is offline";
+            return;
         }
         
         int totalAmountWritten = 0;
@@ -295,28 +283,22 @@
         [starPort endCheckedBlock:&status :2];
         if (status.offline == SM_TRUE)
         {
-            NSLog(@"====Error: An error has occurred during printing");
-            return @"Error: An error has occurred during printing";
+            return;
         }
         
         if (totalAmountWritten < commandSize)
         {
-            NSLog(@"====Printer Error: Write port timed out");
-            return @"Printer Error: Write port timed out";
+            return;
         }
     }
     @catch (PortException *exception)
     {
-        NSLog(@"====Printer Error:Write port timed out");
-        catchError = @"Printer Error:Write port timed out";
+
     }
     @finally
     {
         [SMPort releasePort:starPort];
         free(commandsToSendToPrinter);
-        if(catchError != nil){
-            return catchError;
-        }
     }
 }
 @end

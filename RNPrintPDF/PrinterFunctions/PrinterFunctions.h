@@ -92,7 +92,7 @@ typedef enum {
 
 #pragma mark common
 
-+ (NSString *)PrintImageWithPortname:(NSString *)portName
++ (void)PrintImageWithPortname:(NSString *)portName
                   portSettings:(NSString *)portSettings
                   imageToPrint:(UIImage *)imageToPrint
                       maxWidth:(int)maxWidth
@@ -100,7 +100,7 @@ typedef enum {
                 withDrawerKick:(BOOL)drawerKick;
 
 #pragma mark -
-+ (NSString *)sendCommand:(NSData *)commandsToPrint
++ (void)sendCommand:(NSData *)commandsToPrint
            portName:(NSString *)portName
        portSettings:(NSString *)portSettings
       timeoutMillis:(u_int32_t)timeoutMillis;
@@ -108,14 +108,14 @@ typedef enum {
 #pragma mark search
 + (NSArray *)SearchPrinter;
 #
-+ (NSString *)PrintBitmapWithPortName:(NSString *)portName
++ (void)PrintBitmapWithPortName:(NSString *)portName
                          portSettings:(NSString *)portSettings
                           imageSource:(UIImage *)source
                          printerWidth:(int)maxWidth
                     compressionEnable:(BOOL)compressionEnable
                        pageModeEnable:(BOOL)pageModeEnable;
 #
-+ (NSString *)sendCommandBitmap:(NSData *)commands
++ (void)sendCommandBitmap:(NSData *)commands
                        portName:(NSString *)portName
                    portSettings:(NSString *)portSettings
                   timeoutMillis:(u_int32_t)timeoutMillis;

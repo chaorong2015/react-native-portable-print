@@ -31,5 +31,5 @@ typedef struct ARGBPixel {
 - (NSData *)getGraphicsDataForPrinting:(BOOL)compressionEnable;
 - (NSData *)getImageMiniDataForPrinting:(BOOL)compressionEnable pageModeEnable:(BOOL)pageModeEnable;
 - (NSData *)getImageImpactPrinterForPrinting;
-    
++ (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize;
     @end

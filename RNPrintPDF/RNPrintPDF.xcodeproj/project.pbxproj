@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9B0CD5A31EB36BC20012CEB3 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */; };
-		9B0CD5A41EB36BC70012CEB3 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59E1EB36B750012CEB3 /* StarIO.framework */; };
-		9B0CD5A51EB36BC90012CEB3 /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */; };
 		9BB160B41EA9F25000F999AF /* RNPrintPDF.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9BB160B31EA9F25000F999AF /* RNPrintPDF.h */; };
 		9BB160B61EA9F25000F999AF /* RNPrintPDF.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB160B51EA9F25000F999AF /* RNPrintPDF.m */; };
 		9BB4A60C1EADADCE00737E6D /* NSData+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB4A6001EADADCE00737E6D /* NSData+MD5.m */; };
@@ -25,6 +22,9 @@
 		AF1813151EB08F0500CFBEED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1813141EB08F0500CFBEED /* Foundation.framework */; };
 		AF1813171EB08F1A00CFBEED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF1813161EB08F1A00CFBEED /* QuartzCore.framework */; };
 		AF18136C1EB0A19800CFBEED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF18136B1EB0A19800CFBEED /* UIKit.framework */; };
+		AF5CB6261EB4C0D4009F3E24 /* StarIO_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5CB6221EB4C093009F3E24 /* StarIO_Extension.framework */; };
+		AF5CB6271EB4C0D4009F3E24 /* StarIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5CB6231EB4C093009F3E24 /* StarIO.framework */; };
+		AF5CB6281EB4C0D4009F3E24 /* SMCloudServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5CB6201EB4C07D009F3E24 /* SMCloudServices.framework */; };
 		AFED7BA51EB1EF1200C2093D /* SMCloudServicesResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AFED7BA41EB1EF1200C2093D /* SMCloudServicesResources.bundle */; };
 		AFED7BB21EB2055400C2093D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AFED7BA71EB1F11400C2093D /* Info.plist */; };
 		AFED7BB61EB24F2000C2093D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFED7BB51EB24F2000C2093D /* CoreGraphics.framework */; };
@@ -46,9 +46,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMCloudServices.framework; sourceTree = "<group>"; };
-		9B0CD59E1EB36B750012CEB3 /* StarIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO.framework; sourceTree = "<group>"; };
-		9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO_Extension.framework; sourceTree = "<group>"; };
 		9BB160B01EA9F25000F999AF /* libRNPrintPDF.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNPrintPDF.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BB160B31EA9F25000F999AF /* RNPrintPDF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNPrintPDF.h; sourceTree = "<group>"; };
 		9BB160B51EA9F25000F999AF /* RNPrintPDF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNPrintPDF.m; sourceTree = "<group>"; };
@@ -74,6 +71,9 @@
 		AF1813141EB08F0500CFBEED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF1813161EB08F1A00CFBEED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AF18136B1EB0A19800CFBEED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AF5CB6201EB4C07D009F3E24 /* SMCloudServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMCloudServices.framework; sourceTree = "<group>"; };
+		AF5CB6221EB4C093009F3E24 /* StarIO_Extension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO_Extension.framework; sourceTree = "<group>"; };
+		AF5CB6231EB4C093009F3E24 /* StarIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StarIO.framework; sourceTree = "<group>"; };
 		AFED7BA41EB1EF1200C2093D /* SMCloudServicesResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SMCloudServicesResources.bundle; sourceTree = "<group>"; };
 		AFED7BA71EB1F11400C2093D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFED7BB51EB24F2000C2093D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,15 +85,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0CD5A51EB36BC90012CEB3 /* StarIO_Extension.framework in Frameworks */,
-				9B0CD5A41EB36BC70012CEB3 /* StarIO.framework in Frameworks */,
 				AFED7BB81EB24F3900C2093D /* CoreImage.framework in Frameworks */,
 				AFED7BB61EB24F2000C2093D /* CoreGraphics.framework in Frameworks */,
 				AF18136C1EB0A19800CFBEED /* UIKit.framework in Frameworks */,
 				AF1813171EB08F1A00CFBEED /* QuartzCore.framework in Frameworks */,
 				AF1813151EB08F0500CFBEED /* Foundation.framework in Frameworks */,
 				9BB4A61C1EADBC5D00737E6D /* ExternalAccessory.framework in Frameworks */,
-				9B0CD5A31EB36BC20012CEB3 /* SMCloudServices.framework in Frameworks */,
+				AF5CB6261EB4C0D4009F3E24 /* StarIO_Extension.framework in Frameworks */,
+				AF5CB6271EB4C0D4009F3E24 /* StarIO.framework in Frameworks */,
+				AF5CB6281EB4C0D4009F3E24 /* SMCloudServices.framework in Frameworks */,
 				9BB4A61A1EADBC4400737E6D /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,9 +104,9 @@
 		9B0CD59C1EB36B750012CEB3 /* StarIOSDK */ = {
 			isa = PBXGroup;
 			children = (
-				9B0CD59D1EB36B750012CEB3 /* SMCloudServices.framework */,
-				9B0CD59E1EB36B750012CEB3 /* StarIO.framework */,
-				9B0CD59F1EB36B750012CEB3 /* StarIO_Extension.framework */,
+				AF5CB6221EB4C093009F3E24 /* StarIO_Extension.framework */,
+				AF5CB6231EB4C093009F3E24 /* StarIO.framework */,
+				AF5CB6201EB4C07D009F3E24 /* SMCloudServices.framework */,
 			);
 			path = StarIOSDK;
 			sourceTree = "<group>";
@@ -376,7 +376,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -402,7 +402,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				OTHER_LDFLAGS = "-all_load";
+				OTHER_LDFLAGS = "-ObjC";
 				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
